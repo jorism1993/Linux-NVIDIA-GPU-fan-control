@@ -48,8 +48,8 @@ def set_fan_speed(temps):
 		set_fan_speed_out = set_fan_speed_stream.read()
 
 
-path_to_file = os.path.join('/home/joris/.nfancurve/logs', time.strftime("%Y-%m-%d %H:%M:%S") + '.txt')
-os.makedirs('/home/joris/.nfancurve/logs', exist_ok=True)
+path_to_file = os.path.join('/nfancurve/logs', time.strftime("%Y-%m-%d %H:%M:%S") + '.txt')
+os.makedirs('/nfancurve/logs', exist_ok=True)
 
 
 while True:
