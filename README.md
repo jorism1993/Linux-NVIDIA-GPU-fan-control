@@ -1,5 +1,5 @@
 # linux_nvidia_gpu_fan_control
-This repository contains code for manual tuning of the fan curve of nvidia GPU's on Linux (testen on Ubuntu 18.04). I use this code for setting a custom fan curve on my 4x 1080Ti cards. 
+This repository contains code for manual tuning of the fan curve of nvidia GPU's on Linux (tested on Ubuntu 18.04). I use this code for setting a custom fan curve on my 4x 1080Ti cards. 
 
 ## Usage
 1. Set the coolbits option to atleast 4 using: `$ nvidia-xconfig --cool-bits=4`
