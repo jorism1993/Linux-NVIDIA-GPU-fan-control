@@ -38,11 +38,6 @@ def set_fan_speed(temps):
 		gpu_temp = temps[gpu_id]
 		fan_speed = temp_curve(gpu_temp)
 
-		# set_active_command = f'nvidia-settings -a "[gpu:{gpu_id}]/GPUFanControlState=1"'
-		# set_active_stream = os.popen(set_active_command)
-		# set_active_out = set_active_stream.read()
-		# set_active_stream.close()
-
 		set_fan_speed_command = f'nvidia-settings -a "[gpu:{(NUM_GPUS - 1) - gpu_id}]/GPUFanControlState=1" -a "[fan:{(NUM_GPUS - 1) - gpu_id}]/GPUTargetFanSpeed={fan_speed}"'
 		set_fan_speed_stream = os.popen(set_fan_speed_command)
 		set_fan_speed_out = set_fan_speed_stream.read()
